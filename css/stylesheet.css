@@ -1467,7 +1467,7 @@ audio {
 	.bannar { max-width: 95%; }
 	.bulb { width: 54px; height: 54px; background-size: 54px 54px; }
 	.bulb-holder { height: 72px; }
-	.cake-cover { margin-top: 15px; margin-bottom: 10px; }
+	.cake-cover { margin-top: 38px; margin-bottom: 10px; }
 	.message { width: 95%; top: 75%; }
 	.message p { font-size: clamp(22px, 5.5vw, 38px); margin: 10px 0; }
 	.navbar-fixed-bottom {
@@ -1488,29 +1488,29 @@ audio {
 	.btn-bday.btn-highlight { padding: 11px 18px; font-size: 13px; }
 	.balloons { width: 70px; height: 128px; background-size: 70px 128px; }
 	.balloons h2 { font-size: 32px; }
-	.album-photo { width: 80px; z-index: 2; border-width: 3px; }
-	.album-left-1 { left: 8px; top: 78px; transform: rotate(-3deg); }
+	.album-photo { width: 70px; z-index: 50; border-width: 3px; touch-action: manipulation; }
+	.album-left-1 { left: 6px; top: 440px; transform: rotate(-3deg); }
 	.album-left-2 { display: none; }
-	.album-right-1 { right: 8px; top: 78px; transform: rotate(3deg); }
+	.album-right-1 { right: 6px; top: 440px; transform: rotate(3deg); }
 	.album-right-2 { display: none; }
-	.can-zoom-wrap { right: 12px; top: 240px; left: auto; transform: none; z-index: 3; }
-	.can-zoom-wrap .can-zoom { width: 80px; }
+	.can-zoom-wrap { right: 12px; top: 420px; left: auto; transform: none; z-index: 2; }
+	.can-zoom-wrap .can-zoom { width: 70px; }
 	.zoom-text { font-size: 11px; }
 	.profile-img { width: 80px; height: 80px; right: -100px; bottom: 20px; }
 }
 @media (max-width: 380px) {
-	.album-photo { width: 50px; }
-	.album-left-1 { left: 4px; top: 68px; }
-	.album-right-1 { right: 4px; top: 68px; }
-	.can-zoom-wrap { top: 180px; }
-	.can-zoom-wrap .can-zoom { width: 50px; }
+	.album-photo { width: 48px; }
+	.album-left-1 { left: 4px; top: 400px; }
+	.album-right-1 { right: 4px; top: 400px; }
+	.can-zoom-wrap { top: 380px; }
+	.can-zoom-wrap .can-zoom { width: 48px; }
 	.profile-img { width: 60px; height: 60px; right: -75px; bottom: 15px; }
 }
 @media (max-width: 480px) {
 	.container { padding: 0 8px 110px; }
 	.bulb { width: 44px; height: 44px; background-size: 44px 44px; }
 	.bulb-holder { height: 58px; }
-	.cake-cover { margin-top: 10px; margin-bottom: 5px; }
+	.cake-cover { margin-top: 28px; margin-bottom: 5px; }
 	.message { width: 98%; top: 72%; }
 	.message p { font-size: clamp(18px, 4.8vw, 26px); margin: 6px 0; }
 	.navbar-fixed-bottom { padding: 8px 6px 10px; }
@@ -1518,13 +1518,13 @@ audio {
 	.btn-bday.btn-highlight { padding: 9px 14px; font-size: 12px; }
 	.balloons { width: 55px; height: 101px; background-size: 55px 101px; }
 	.balloons h2 { font-size: 22px; }
-	.album-photo { width: 56px; z-index: 2; border-width: 2px; }
-	.album-left-1 { left: 6px; top: 72px; transform: rotate(-2deg); }
+	.album-photo { width: 52px; z-index: 50; border-width: 2px; touch-action: manipulation; }
+	.album-left-1 { left: 6px; top: 400px; transform: rotate(-2deg); }
 	.album-left-2 { display: none; }
-	.album-right-1 { right: 6px; top: 72px; transform: rotate(2deg); }
+	.album-right-1 { right: 6px; top: 400px; transform: rotate(2deg); }
 	.album-right-2 { display: none; }
-	.can-zoom-wrap { right: 8px; top: 200px; left: auto; transform: none; z-index: 3; }
-	.can-zoom-wrap .can-zoom { width: 56px; }
+	.can-zoom-wrap { right: 8px; top: 380px; left: auto; transform: none; z-index: 2; }
+	.can-zoom-wrap .can-zoom { width: 52px; }
 	.zoom-text { font-size: 10px; }
 	.cake { width: 220px; height: 220px; margin-left: -110px; }
 	.profile-img { width: 64px; height: 64px; right: -72px; bottom: 15px; }

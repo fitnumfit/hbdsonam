@@ -11,18 +11,22 @@ $(document).ready(function(){
 			if (w < 768) return 62;
 			return 90;
 		}
+		function getBalloonTop() {
+			return ($(window).width() < 768) ? 300 : 240;
+		}
 		$(window).on('resize', function(){
 			vw = $(window).width() / 2;
 			balloonOffset = getBalloonGap();
+			var topPos = getBalloonTop();
 			$('#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8').stop();
-			if ($('#b11').length) 			$('#b11').animate({top: 240, left: vw - balloonOffset * 3.5}, 650);
-			if ($('#b22').length) $('#b22').animate({top: 240, left: vw - balloonOffset * 2.5}, 650);
-			if ($('#b33').length) $('#b33').animate({top: 240, left: vw - balloonOffset * 1.5}, 650);
-			if ($('#b44').length) $('#b44').animate({top: 240, left: vw - balloonOffset * 0.5}, 650);
-			if ($('#b55').length) $('#b55').animate({top: 240, left: vw + balloonOffset * 0.5}, 650);
-			if ($('#b66').length) $('#b66').animate({top: 240, left: vw + balloonOffset * 1.5}, 650);
-			if ($('#b77').length) $('#b77').animate({top: 240, left: vw + balloonOffset * 2.5}, 650);
-			if ($('#b88').length) $('#b88').animate({top: 240, left: vw + balloonOffset * 3.5}, 650);
+			if ($('#b11').length) $('#b11').animate({top: topPos, left: vw - balloonOffset * 3.5}, 650);
+			if ($('#b22').length) $('#b22').animate({top: topPos, left: vw - balloonOffset * 2.5}, 650);
+			if ($('#b33').length) $('#b33').animate({top: topPos, left: vw - balloonOffset * 1.5}, 650);
+			if ($('#b44').length) $('#b44').animate({top: topPos, left: vw - balloonOffset * 0.5}, 650);
+			if ($('#b55').length) $('#b55').animate({top: topPos, left: vw + balloonOffset * 0.5}, 650);
+			if ($('#b66').length) $('#b66').animate({top: topPos, left: vw + balloonOffset * 1.5}, 650);
+			if ($('#b77').length) $('#b77').animate({top: topPos, left: vw + balloonOffset * 2.5}, 650);
+			if ($('#b88').length) $('#b88').animate({top: topPos, left: vw + balloonOffset * 3.5}, 650);
 		}).trigger('resize');
 
 	$('#turn_on').click(function(){
@@ -124,6 +128,7 @@ $(document).ready(function(){
 	$('#wish_message').click(function(){
 		vw = $(window).width() / 2;
 		balloonOffset = getBalloonGap();
+		var topPos = getBalloonTop();
 		$('#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8').stop();
 		$('#b1').attr('id','b11');
 		$('#b2').attr('id','b22');
@@ -133,14 +138,14 @@ $(document).ready(function(){
 		$('#b6').attr('id','b66');
 		$('#b7').attr('id','b77');
 		$('#b8').attr('id','b88');
-		$('#b11').animate({top: 240, left: vw - balloonOffset * 3.5}, 650);
-		$('#b22').animate({top: 240, left: vw - balloonOffset * 2.5}, 650);
-		$('#b33').animate({top: 240, left: vw - balloonOffset * 1.5}, 650);
-		$('#b44').animate({top: 240, left: vw - balloonOffset * 0.5}, 650);
-		$('#b55').animate({top: 240, left: vw + balloonOffset * 0.5}, 650);
-		$('#b66').animate({top: 240, left: vw + balloonOffset * 1.5}, 650);
-		$('#b77').animate({top: 240, left: vw + balloonOffset * 2.5}, 650);
-		$('#b88').animate({top: 240, left: vw + balloonOffset * 3.5}, 650);
+		$('#b11').animate({top: topPos, left: vw - balloonOffset * 3.5}, 650);
+		$('#b22').animate({top: topPos, left: vw - balloonOffset * 2.5}, 650);
+		$('#b33').animate({top: topPos, left: vw - balloonOffset * 1.5}, 650);
+		$('#b44').animate({top: topPos, left: vw - balloonOffset * 0.5}, 650);
+		$('#b55').animate({top: topPos, left: vw + balloonOffset * 0.5}, 650);
+		$('#b66').animate({top: topPos, left: vw + balloonOffset * 1.5}, 650);
+		$('#b77').animate({top: topPos, left: vw + balloonOffset * 2.5}, 650);
+		$('#b88').animate({top: topPos, left: vw + balloonOffset * 3.5}, 650);
 		$('.balloons').css('opacity', '0.9');
 		$('.balloons h2').fadeIn(1600);
 		$(this).fadeOut('slow').delay(1200).promise().done(function(){
@@ -176,19 +181,17 @@ $(document).ready(function(){
 
 });
 
-// Zoom (lightbox) feature
-$('.album-photo').click(function() {
+// Zoom (lightbox) – delegation so tap works after photos are shown
+$(document).on('click', '.album-photo', function() {
     var src = $(this).attr('src');
     $('#lightbox img').attr('src', src);
-
-    // Force flex only when showing
     $('#lightbox').css('display', 'flex').hide().fadeIn('fast');
 });
 
 // Close when clicking outside image
-$('#lightbox').click(function(e) {
-    if (e.target !== this) return; // only close if background clicked
-    $('#lightbox').fadeOut('fast');
+$('#lightbox').on('click', function(e) {
+    if (e.target !== this) return;
+    $(this).fadeOut('fast');
 });
 
 
