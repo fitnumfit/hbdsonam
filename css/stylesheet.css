@@ -1488,22 +1488,23 @@ audio {
 	.btn-bday.btn-highlight { padding: 11px 18px; font-size: 13px; }
 	.balloons { width: 70px; height: 128px; background-size: 70px 128px; }
 	.balloons h2 { font-size: 32px; }
-	.album-photo { width: 100px; z-index: 2; border-width: 3px; }
+	.album-photo { width: 80px; z-index: 2; border-width: 3px; }
 	.album-left-1 { left: 8px; top: 78px; transform: rotate(-3deg); }
 	.album-left-2 { display: none; }
 	.album-right-1 { right: 8px; top: 78px; transform: rotate(3deg); }
 	.album-right-2 { display: none; }
 	.can-zoom-wrap { right: 12px; top: 240px; left: auto; transform: none; z-index: 3; }
-	.can-zoom-wrap .can-zoom { width: 100px; }
+	.can-zoom-wrap .can-zoom { width: 80px; }
 	.zoom-text { font-size: 11px; }
-	.profile-img { width: 100px; height: 100px; right: -120px; bottom: 20px; }
+	.profile-img { width: 80px; height: 80px; right: -100px; bottom: 20px; }
 }
 @media (max-width: 380px) {
-	.album-photo { width: 58px; }
+	.album-photo { width: 50px; }
 	.album-left-1 { left: 4px; top: 68px; }
 	.album-right-1 { right: 4px; top: 68px; }
 	.can-zoom-wrap { top: 180px; }
-	.can-zoom-wrap .can-zoom { width: 60px; }
+	.can-zoom-wrap .can-zoom { width: 50px; }
+	.profile-img { width: 60px; height: 60px; right: -75px; bottom: 15px; }
 }
 @media (max-width: 480px) {
 	.container { padding: 0 8px 110px; }
@@ -1517,16 +1518,16 @@ audio {
 	.btn-bday.btn-highlight { padding: 9px 14px; font-size: 12px; }
 	.balloons { width: 55px; height: 101px; background-size: 55px 101px; }
 	.balloons h2 { font-size: 22px; }
-	.album-photo { width: 68px; z-index: 2; border-width: 2px; }
+	.album-photo { width: 56px; z-index: 2; border-width: 2px; }
 	.album-left-1 { left: 6px; top: 72px; transform: rotate(-2deg); }
 	.album-left-2 { display: none; }
 	.album-right-1 { right: 6px; top: 72px; transform: rotate(2deg); }
 	.album-right-2 { display: none; }
 	.can-zoom-wrap { right: 8px; top: 200px; left: auto; transform: none; z-index: 3; }
-	.can-zoom-wrap .can-zoom { width: 70px; }
+	.can-zoom-wrap .can-zoom { width: 56px; }
 	.zoom-text { font-size: 10px; }
 	.cake { width: 220px; height: 220px; margin-left: -110px; }
-	.profile-img { width: 80px; height: 80px; right: -90px; bottom: 15px; }
+	.profile-img { width: 64px; height: 64px; right: -72px; bottom: 15px; }
 }
 @media (min-width: 769px) {
 	.navbar-fixed-bottom .btn-bday { margin: 6px 5px; }
