@@ -78,6 +78,8 @@ body {
 
 .container {
 	display: none;
+	position: relative;
+	z-index: 10;
 	min-height: 100vh;
 	padding-bottom: 140px;
 	box-sizing: border-box;
@@ -1486,15 +1488,22 @@ audio {
 	.btn-bday.btn-highlight { padding: 11px 18px; font-size: 13px; }
 	.balloons { width: 70px; height: 128px; background-size: 70px 128px; }
 	.balloons h2 { font-size: 32px; }
-	.album-photo { width: 140px; }
-	.album-left-1 { left: 15px; top: 20px; }
-	.album-left-2 { left: 25px; top: 160px; }
-	.album-right-1 { right: 15px; top: 20px; }
-	.album-right-2 { right: 25px; top: 160px; }
-	.can-zoom-wrap { right: 20px; top: 380px; left: auto; transform: none; }
-	.can-zoom-wrap .can-zoom { width: 120px; }
-	.zoom-text { font-size: 12px; }
+	.album-photo { width: 100px; z-index: 2; border-width: 3px; }
+	.album-left-1 { left: 8px; top: 78px; transform: rotate(-3deg); }
+	.album-left-2 { display: none; }
+	.album-right-1 { right: 8px; top: 78px; transform: rotate(3deg); }
+	.album-right-2 { display: none; }
+	.can-zoom-wrap { right: 12px; top: 240px; left: auto; transform: none; z-index: 3; }
+	.can-zoom-wrap .can-zoom { width: 100px; }
+	.zoom-text { font-size: 11px; }
 	.profile-img { width: 100px; height: 100px; right: -120px; bottom: 20px; }
+}
+@media (max-width: 380px) {
+	.album-photo { width: 58px; }
+	.album-left-1 { left: 4px; top: 68px; }
+	.album-right-1 { right: 4px; top: 68px; }
+	.can-zoom-wrap { top: 180px; }
+	.can-zoom-wrap .can-zoom { width: 60px; }
 }
 @media (max-width: 480px) {
 	.container { padding: 0 8px 110px; }
@@ -1508,14 +1517,14 @@ audio {
 	.btn-bday.btn-highlight { padding: 9px 14px; font-size: 12px; }
 	.balloons { width: 55px; height: 101px; background-size: 55px 101px; }
 	.balloons h2 { font-size: 22px; }
-	.album-photo { width: 90px; }
-	.album-left-1 { left: 5px; top: 12px; }
-	.album-left-2 { left: 12px; top: 100px; }
-	.album-right-1 { right: 5px; top: 12px; }
-	.album-right-2 { right: 12px; top: 100px; }
-	.can-zoom-wrap { right: 12px; top: 320px; left: auto; transform: none; }
-	.can-zoom-wrap .can-zoom { width: 80px; }
-	.zoom-text { font-size: 11px; }
+	.album-photo { width: 68px; z-index: 2; border-width: 2px; }
+	.album-left-1 { left: 6px; top: 72px; transform: rotate(-2deg); }
+	.album-left-2 { display: none; }
+	.album-right-1 { right: 6px; top: 72px; transform: rotate(2deg); }
+	.album-right-2 { display: none; }
+	.can-zoom-wrap { right: 8px; top: 200px; left: auto; transform: none; z-index: 3; }
+	.can-zoom-wrap .can-zoom { width: 70px; }
+	.zoom-text { font-size: 10px; }
 	.cake { width: 220px; height: 220px; margin-left: -110px; }
 	.profile-img { width: 80px; height: 80px; right: -90px; bottom: 15px; }
 }
