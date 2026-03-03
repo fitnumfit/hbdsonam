@@ -170,11 +170,8 @@ $(document).ready(function(){
 		}
 		msgLoop(0);
 	});
-	$('#message_done').on('click', function(){
-		$('.message').fadeOut('slow');
-		$('.message-reply').hide();
-		$('.message .col-md-12 > p').hide();
-		$('.cake').fadeIn('slow');
+	$('#message_reload').on('click', function(){
+		location.reload();
 	});
 
 });
