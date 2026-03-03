@@ -5,13 +5,13 @@
 <!--[if gt IE 8]> <html> <![endif]-->
 <!--[if !IE]><!--><html lang="en"><!-- <![endif]-->
 <head>
-	<title>Happy Birthday</title>
+	<title>Happy Birthday Sonam</title>
 	<meta charset="UTF-8" />
-	<meta name="description" content="Happy Birthday Anggie">
+	<meta name="description" content="Happy Birthday Sonam">
 	<meta name="robots" content="index, follow" />
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-	<link rel="author" href="alex" /> 
-    <meta name="keywords" content="Birthday, Happy">
+	<link rel="author" href="sonam" /> 
+    <meta name="keywords" content="Birthday, Happy, Sonam">
 
     <!-- Strat of Facebook Meta -->
     <meta property="og:type" content="E-Greeting" />
@@ -304,14 +304,15 @@ p {
 }
 
 .profile-img {
-  position: absolute; /* relative to .cake */
-  bottom: 30px;  /* 10px below cake */
-  right: -170px;  /* 70px to the right of cake */
-  width: 150px;
-  height: 150px;
+  position: absolute;
+  bottom: 10px;
+  right: -200px;
+  width: 140px;
+  height: 140px;
   border: 5px solid white;
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   border-radius: 10px;
+  object-fit: cover;
 }
 
 </style>
@@ -320,13 +321,16 @@ p {
 
 <body>
 	<div class="loading"></div>
-  <img src="assets/images/photo1.jpg" class="album-photo album-left-1">
-  <img src="assets/images/photo2.jpg" class="album-photo album-left-2">
-  <img src="assets/images/photo3.jpg" class="album-photo album-right-1">
-  <img src="assets/images/photo4.jpg" class="album-photo album-right-2">
+  <img src="assets/images/photo1.jpeg" class="album-photo album-left-1">
+  <img src="assets/images/photo2.jpeg" class="album-photo album-left-2">
+  <img src="assets/images/photo3.jpeg" class="album-photo album-right-1">
+  <img src="assets/images/photo4.jpeg" class="album-photo album-right-2">
 
-  <!-- Hint image -->
-  <img src="assets/images/can-zoom.png" class="can-zoom">
+  <!-- Zoom hint: image + text -->
+  <div class="can-zoom-wrap">
+    <img src="assets/images/can-zoom.png" class="can-zoom" alt="">
+    <span class="zoom-text">Tap photos to zoom</span>
+  </div>
 
 	<audio class="song" controls loop>
         <source src="assets/audio/hbd.mp3"></source>
@@ -403,38 +407,34 @@ p {
 				    <div class="fuego"></div>
 				  </div>
 				  <div class="cobertura"></div>
-          <img src="assets/images/person.png" class="profile-img">
+          <img src="assets/images/person.jpeg" class="profile-img">
 				  <div class="bizcocho"></div>
 				</div>
 			</div>
 		</div>
 		<div class="row message">
 			<div class="col-md-12">
-				<p>Today is...</p>
-				<p>as beautiful as other days</p>
-				<p>but you realize</p>
-				<p>another year has gone</p>
-				<p>in a blink of the eyes</p>
-				<p><strong>however</strong></p>
-				<p>Do you know..?</p>
-				<p>today is just special</p>
-				<p>so special to you</p>
-				<p>that's why</p>
-				<p>Let's make it...</p>
-				<p>the best celebration ever</p>
+				<p>Happy Birthday, Sonam!</p>
+				<p>May this new year of your life bring you peace, joy, and many beautiful moments.</p>
+				<p>You truly deserve the best!</p>
+				<div class="message-reply" style="display:none;">
+					<p class="reply-prompt">Want to send a wish back?</p>
+					<a href="mailto:?subject=Happy Birthday Reply&amp;body=Thanks for the wishes! 🎂" class="btn btn-bday btn-reply" target="_blank" rel="noopener">💌 Reply with a wish</a>
+					<button type="button" class="btn btn-bday btn-reply-close" id="message_done">✨ Done</button>
+				</div>
 			</div>
 		</div>
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
-				<div class="col-md-6 text-center col-md-offset-3">
-					<button class="btn btn-primary" id="turn_on">Turn On Lights</button>
-					<button class="btn btn-primary" id="play">Play the Music Buddy</button>
-					<button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
-					<button class="btn btn-primary" id="balloons_flying">Calm, i got you some baloons</button>
-					<button class="btn btn-primary" id="cake_fadein">Cake? of course!</button>
-					<button class="btn btn-primary" id="light_candle">Don't forget to Light the Candle</button>
-					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
-					<button class="btn btn-primary" id="story">A mesage for you</button>
+				<div class="col-md-6 text-center col-md-offset-3 btn-wrap">
+					<button class="btn btn-bday" id="turn_on">💡 Turn On Lights</button>
+					<button class="btn btn-bday" id="play">🎵 Play the Music</button>
+					<button class="btn btn-bday" id="bannar_coming">🎀 Let's Decorate</button>
+					<button class="btn btn-bday" id="balloons_flying">🎈 Here come the balloons</button>
+					<button class="btn btn-bday" id="cake_fadein">🎂 Cake? Of course!</button>
+					<button class="btn btn-bday" id="light_candle">🕯️ Light the Candle</button>
+					<button class="btn btn-bday" id="wish_message">🎉 Happy Birthday</button>
+					<button class="btn btn-bday btn-highlight" id="story">💌 A message for you</button>
 					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
 				</div>
 			</div>
